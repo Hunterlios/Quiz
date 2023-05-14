@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\Create.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CreateAnswer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Edit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditorMode.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Game.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\GameOver.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MainWindowView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Menu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\QuizEditList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\QuizEditListQuestions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\QuizList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Create.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CreateAnswer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Edit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditorMode.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Game.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\GameOver.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Menu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\QuizEditList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\QuizEditListQuestions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\QuizList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

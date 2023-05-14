@@ -1,0 +1,20 @@
+﻿Quiz
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\
+Quiz
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\App.xaml
+11-799997418
+
+201399592664
+194-1951243044
+View\Create.xaml;View\CreateAnswer.xaml;View\Edit.xaml;View\EditorMode.xaml;View\Game.xaml;View\GameOver.xaml;View\MainWindowView.xaml;View\Menu.xaml;View\QuizEditList.xaml;View\QuizEditListQuestions.xaml;View\QuizList.xaml;
+
+False
+
