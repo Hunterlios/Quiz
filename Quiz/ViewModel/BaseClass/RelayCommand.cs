@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace TicTacToe.ViewModel.BaseClass
+namespace Quiz.ViewModel.BaseClass
 {
     class RelayCommand : ICommand
     {

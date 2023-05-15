@@ -7,72 +7,36 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View\Create.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\CreateAnswer.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\Edit.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\EditorMode.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\Game.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\GameOver.xaml.cs">
+    <Compile Update="View\CreateView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\MainWindowView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Menu.xaml.cs">
+    <Compile Update="View\MenuView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\QuizEditList.xaml.cs">
+    <Compile Update="View\QuizEditListQueView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\QuizEditListQuestions.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\QuizList.xaml.cs">
+    <Compile Update="View\QuizListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="View\Create.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\CreateAnswer.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Edit.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\EditorMode.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Game.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\GameOver.xaml">
+    <Page Update="View\CreateView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainWindowView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Menu.xaml">
+    <Page Update="View\MenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\QuizEditList.xaml">
+    <Page Update="View\QuizEditListQueView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\QuizEditListQuestions.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\QuizList.xaml">
+    <Page Update="View\QuizListView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

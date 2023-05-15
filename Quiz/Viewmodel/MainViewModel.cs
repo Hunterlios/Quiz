@@ -7,16 +7,14 @@ using Quiz.ViewModel.BaseClass;
 using Quiz.View;
 namespace Quiz.ViewModel
 {
-    internal class MainViewModel : BaseViewModel
+    internal class MainViewModel : BaseViewModel 
     {
-        private BaseViewModel _selectedViewModel = new MainWindowView();
+        public BaseViewModel CurrentViewModel { get; }
 
-        public BaseViewModel SelectedViewModel
+        public MainViewModel()
         {
-            get { return _selectedViewModel; }
-            set { _selectedViewModel = value; }
+            CurrentViewModel = new MenuViewModel();
         }
-
 
     }
 }

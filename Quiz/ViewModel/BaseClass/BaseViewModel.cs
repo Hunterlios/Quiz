@@ -1,17 +1,19 @@
-﻿using Quiz.View;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Quiz.ViewModel.BaseClass
 {
-    internal class BaseViewModel
+    public class BaseViewModel : INotifyPropertyChanged, IDisposable
     {
-        public static implicit operator BaseViewModel(MainWindowView v)
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName = null)
         {
-            throw new NotImplementedException();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public virtual void Dispose() { }
     }
 }

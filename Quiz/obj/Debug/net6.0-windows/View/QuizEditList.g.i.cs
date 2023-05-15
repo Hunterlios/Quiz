@@ -53,7 +53,7 @@ namespace Quiz.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quiz;component/view/quizeditlist.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quiz;V1.0.0.0;component/view/quizeditlist.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\QuizEditList.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

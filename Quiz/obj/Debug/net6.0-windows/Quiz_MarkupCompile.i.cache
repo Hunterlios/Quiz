@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\App.xaml
-11-799997418
+5980435288
 
-23-986282322
+18-115175255
 1941645785384
-View\Create.xaml;View\CreateAnswer.xaml;View\Edit.xaml;View\EditorMode.xaml;View\Game.xaml;View\GameOver.xaml;View\MainWindowView.xaml;View\Menu.xaml;View\QuizEditList.xaml;View\QuizEditListQuestions.xaml;View\QuizList.xaml;
+View\CreateView.xaml;View\MainWindowView.xaml;View\MenuView.xaml;View\QuizEditListQueView.xaml;View\QuizListView.xaml;
 
 True
 

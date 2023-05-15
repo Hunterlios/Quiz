@@ -23,8 +23,6 @@ namespace Quiz.View
         public MainWindowView()
         {
             InitializeComponent();
-
-            DataContext = new MainViewModel();
         }
     }
 }
