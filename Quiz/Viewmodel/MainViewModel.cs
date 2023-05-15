@@ -5,16 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using Quiz.ViewModel.BaseClass;
 using Quiz.View;
+using Quiz.Model;
+
 namespace Quiz.ViewModel
 {
     internal class MainViewModel : BaseViewModel 
     {
-        public BaseViewModel CurrentViewModel { get; }
+        private readonly NavigationStore _navigationStore;
 
-        public MainViewModel()
+        public BaseViewModel CurrentViewModel => _navigationStore.CurrentViewModel;
+
+        public MainViewModel(NavigationStore navStore)
         {
-            CurrentViewModel = new MenuViewModel();
+            _navigationStore = navStore;
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
         }
 
+        private void OnCurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
+        }
     }
 }

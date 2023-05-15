@@ -31,7 +31,7 @@
         <Label Content="QUIZ" Foreground="#FFE0E0E0" Grid.Column="2" FontSize="50" HorizontalAlignment="Center" />
 
         <Button Grid.Row="2" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="Zagraj" Margin="5"/>
-        <Button Grid.Row="3" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="Stwórz" Margin="5" Command="{Binding CreateQuiz}"/>
+        <Button Grid.Row="3" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="Stwórz" Margin="5" Command="{Binding NavigateToCreateCommand}"/>
         <Button Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="Wyjście" Margin="5"/>
     </Grid>
 </UserControl>

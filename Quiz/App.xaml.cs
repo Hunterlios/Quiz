@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Quiz.ViewModel;
 using Quiz.View;
-
+using Quiz.Model;
 
 namespace Quiz
 {
@@ -18,9 +18,13 @@ namespace Quiz
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            NavigationStore navStore = new NavigationStore();
+
+            navStore.CurrentViewModel = new CreateViewModel(navStore);
+
             MainWindow = new MainWindowView()
             {
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(navStore)
             };
             MainWindow.Show();
 

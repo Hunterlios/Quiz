@@ -18,7 +18,7 @@ namespace Quiz.View
     /// <summary>
     /// Logika interakcji dla klasy QuizEditListQuestions.xaml
     /// </summary>
-    public partial class QuizEditListQuestionsView : Page
+    public partial class QuizEditListQuestionsView : UserControl
     {
         public QuizEditListQuestionsView()
         {

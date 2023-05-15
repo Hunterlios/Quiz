@@ -18,7 +18,7 @@ namespace Quiz.View
     /// <summary>
     /// Logika interakcji dla klasy Create.xaml
     /// </summary>
-    public partial class CreateView : Page
+    public partial class CreateView : UserControl
     {
         public CreateView()
         {
