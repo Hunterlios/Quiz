@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Quiz.ViewModel;
 
 namespace Quiz.View
 {
@@ -22,6 +23,8 @@ namespace Quiz.View
         public MainWindowView()
         {
             InitializeComponent();
+
+            DataContext = new MainViewModel();
         }
     }
 }

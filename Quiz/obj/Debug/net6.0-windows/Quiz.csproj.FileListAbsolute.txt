@@ -19,3 +19,46 @@ D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-wi
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\Quiz.pdb
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\Quiz.genruntimeconfig.cache
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\ref\Quiz.dll
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\bin\Debug\net6.0-windows\Quiz.exe
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\bin\Debug\net6.0-windows\Quiz.deps.json
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\bin\Debug\net6.0-windows\Quiz.runtimeconfig.json
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\bin\Debug\net6.0-windows\Quiz.dll
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\bin\Debug\net6.0-windows\Quiz.pdb
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.csproj.AssemblyReference.cache
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Create.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateAnswer.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Edit.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\EditorMode.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Game.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\GameOver.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\MainWindowView.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Menu.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizEditList.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizEditListQuestions.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizList.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz_MarkupCompile.cache
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz_MarkupCompile.lref
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Create.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateAnswer.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Edit.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\EditorMode.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Game.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\GameOver.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\MainWindowView.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\Menu.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizEditList.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizEditListQuestions.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizList.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.g.resources
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.AssemblyInfoInputs.cache
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.AssemblyInfo.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.csproj.CoreCompileInputs.cache
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.dll
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\refint\Quiz.dll
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.pdb
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\Quiz.genruntimeconfig.cache
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\ref\Quiz.dll
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\App.baml
