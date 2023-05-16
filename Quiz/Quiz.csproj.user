@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\CreateNameView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CreateQuestionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\CreateView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,11 +25,14 @@
     <Compile Update="View\QuizEditListQueView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\QuizListView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\CreateNameView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CreateQuestionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\CreateView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,9 +43,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\QuizEditListQueView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\QuizListView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

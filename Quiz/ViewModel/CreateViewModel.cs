@@ -13,10 +13,12 @@ namespace Quiz.ViewModel
     internal class CreateViewModel: BaseViewModel
     {
         public ICommand NavigateMenuCommand { get; }
+        public ICommand NavigateToCreateNameCommand { get; }
 
         public CreateViewModel(NavigationStore navStore)
         {
             NavigateMenuCommand = new NavigateMenuCommand(navStore);
+            NavigateToCreateNameCommand = new NavigateToCreateNameCommand(navStore);
         }
 
     }
