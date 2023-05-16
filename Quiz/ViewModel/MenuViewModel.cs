@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Quiz.Model;
+using Quiz.Model.Commands;
 using Quiz.Model.Navigation;
 using Quiz.ViewModel.BaseClass;
 
@@ -15,10 +16,14 @@ namespace Quiz.ViewModel
     {
 
         public ICommand NavigateToCreateCommand { get; }
+        public ICommand ShutDownCommand { get; }
 
         public MenuViewModel(NavigationStore navStore)
         {
             NavigateToCreateCommand = new NavigateToCreateCommand(navStore);
+            ShutDownCommand = new ShutDownCommand();
         }
+
+
     }
 }

@@ -43,9 +43,11 @@ C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-window
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateView.g.cs
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\MenuView.g.cs
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizEditListQueView.g.cs
-C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizListView.g.cs
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateView.baml
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\MenuView.baml
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizEditListQueView.baml
-C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizListView.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateNameView.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateNameView.baml
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateQuestionView.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateQuestionView.baml

@@ -20,7 +20,7 @@ namespace Quiz
         {
             NavigationStore navStore = new NavigationStore();
 
-            navStore.CurrentViewModel = new CreateViewModel(navStore);
+            navStore.CurrentViewModel = new MenuViewModel(navStore);
 
             MainWindow = new MainWindowView()
             {
