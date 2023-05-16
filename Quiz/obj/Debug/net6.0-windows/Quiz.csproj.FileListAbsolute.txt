@@ -49,3 +49,12 @@ C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-window
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\MenuView.baml
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizEditListQueView.baml
 C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\QuizListView.baml
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\CreateView.g.cs
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\MenuView.g.cs
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizEditListQueView.g.cs
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizListView.g.cs
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\CreateView.baml
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\MenuView.baml
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizEditListQueView.baml
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizListView.baml
