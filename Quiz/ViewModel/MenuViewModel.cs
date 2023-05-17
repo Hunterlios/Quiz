@@ -14,12 +14,13 @@ namespace Quiz.ViewModel
 {
     internal class MenuViewModel : BaseViewModel
     {
-
+        public ICommand NavigateToNewGameCommand { get; }
         public ICommand NavigateToCreateCommand { get; }
         public ICommand ShutDownCommand { get; }
 
         public MenuViewModel(NavigationStore navStore)
         {
+            NavigateToNewGameCommand =  new NavigateToNewGameCommand(navStore);
             NavigateToCreateCommand = new NavigateToCreateCommand(navStore);
             ShutDownCommand = new ShutDownCommand();
         }

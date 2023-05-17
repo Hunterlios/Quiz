@@ -54,7 +54,7 @@ namespace Quiz.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quiz;V1.0.0.0;component/view/createnameview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quiz;component/view/createnameview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\CreateNameView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
