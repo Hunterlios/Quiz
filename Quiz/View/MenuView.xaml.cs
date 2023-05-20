@@ -25,5 +25,9 @@ namespace Quiz.View
             InitializeComponent();
         }
 
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

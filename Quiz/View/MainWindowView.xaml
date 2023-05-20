@@ -15,6 +15,10 @@
                 <view:MenuView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewmodel:CreateNewGameViewModel}">
+                <view:CreateNewGameView/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewmodel:CreateViewModel}">
                 <view:CreateView/>
             </DataTemplate>
