@@ -23,6 +23,10 @@ namespace Quiz.View
         public CreateQuestionView()
         {
             InitializeComponent();
+            answerComboBox.Items.Add("A");
+            answerComboBox.Items.Add("B");
+            answerComboBox.Items.Add("C");
+            answerComboBox.Items.Add("D");
         }
     }
 }

@@ -14,6 +14,8 @@ namespace Quiz.ViewModel
     {
         public ICommand NavigateToCreateNameCommand { get; }
 
+       
+
         public CreateQuestionViewModel(NavigationStore navStore)
         {
             NavigateToCreateNameCommand = new NavigateToCreateNameCommand(navStore);

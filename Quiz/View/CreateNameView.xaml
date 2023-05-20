@@ -31,13 +31,9 @@
         </Grid.RowDefinitions>
 
         <Button Grid.RowSpan="2" FontSize="20" Margin="40px" Content="Wróć" Command="{Binding NavigateToCreateCommand}"/>
-        <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+        <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
              FontSize="20" Content="Nazwij swój Quiz:"/>
-        <TextBox Margin="20px" Grid.Column="1" Grid.Row="2"/>
-
-        <Label Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
-             FontSize="20" Content="Ile pytań ma mieć Twój Quiz:" />
-        <TextBox Margin="20px" Grid.Column="1" Grid.Row="5"/>
+        <TextBox Margin="20px" Grid.Column="1" Grid.Row="3"/>
 
         <Button Grid.Column="1" Grid.Row="7" FontSize="20" Margin="20px" Content="Zatwierdź" Command="{Binding NavigateToCreateQuestionCommand}" />
 

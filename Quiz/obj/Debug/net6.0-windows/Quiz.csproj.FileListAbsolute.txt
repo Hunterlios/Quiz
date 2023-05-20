@@ -98,3 +98,5 @@ D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\Quiz\obj\Debug\net6
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\Quiz\obj\Debug\net6.0-windows\Quiz.csproj.CoreCompileInputs.cache
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\Quiz\obj\Debug\net6.0-windows\Quiz.genruntimeconfig.cache
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quiz\Quiz\Quiz\obj\Debug\net6.0-windows\ref\Quiz.dll
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateNewGameView.g.cs
+C:\Users\48509\Desktop\Studies\4th\Prog\QuizProject\Quiz\obj\Debug\net6.0-windows\View\CreateNewGameView.baml
