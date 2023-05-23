@@ -8,13 +8,15 @@ namespace Quiz.Model
 {
     internal class CreatingQuiz
     {
-        public string Name { get; set; }
-        List<Question> questions = new List<Question>();
+        private string Name { get; set; }
+        public List<Question> questions = new List<Question>();
+        public int iterator;
+
 
         public CreatingQuiz(string name)
         {
+            iterator = 0;
             Name = name;
-            this.questions = questions;
         }
 
 

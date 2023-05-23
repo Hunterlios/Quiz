@@ -13,7 +13,7 @@ namespace Quiz.Model
         private string answerB;
         private string answerC;
         private string answerD;
-        private char correctAnswer;
+        private string correctAnswer;
 
         public string TheQuestion
         {
@@ -45,13 +45,13 @@ namespace Quiz.Model
             set { answerD = value; }
         }
 
-        public char CorrectAnswer
+        public string CorrectAnswer
         {
             get { return correctAnswer; }
             set { correctAnswer = value; }
         }
 
-        public Question(string theQuestion, string answerA, string answerB, string answerC, string answerD, char correctAnswer)
+        public Question(string theQuestion, string answerA, string answerB, string answerC, string answerD, string correctAnswer)
         {
             this.theQuestion = theQuestion;
             this.answerA = answerA;
