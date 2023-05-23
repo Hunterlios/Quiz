@@ -24,6 +24,7 @@ namespace Quiz.ViewModel.BaseClass
 
         readonly Action<object> _execute;
         readonly Predicate<object> _canExecute;
+        private ICommand? saveNameCommand;
 
         public RelayCommand(Action<object> execute, Predicate<object> canExecute)
         {

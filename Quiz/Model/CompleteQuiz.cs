@@ -8,8 +8,12 @@ namespace Quiz.Model
 {
     internal class CompleteQuiz
     {
-        string nameOfTheQuiz;
+        private string nameOfTheQuiz;
         List<Question> questionlist;
+
+        public string NameOfTheQuiz { get; set; }
+
+        public List<Question> Questions { get; set; }
 
         public CompleteQuiz(string nameOfTheQuiz, List<Question> questionlist)
         {

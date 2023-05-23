@@ -5,16 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows;
 
-namespace Quiz.Model.Navigation
+namespace Quiz.Model
 {
     internal class NavigateToCreateQuestionCommand : ICommand
     {
         private readonly NavigationStore _navStore;
-
-        public NavigateToCreateQuestionCommand(NavigationStore navStore)
+        private readonly CreateNameViewModel _viewModel;
+        public NavigateToCreateQuestionCommand(NavigationStore navStore, CreateNameViewModel createNameViewModel)
         {
             _navStore = navStore;
+            _viewModel = createNameViewModel;   
         }
 
         public event EventHandler? CanExecuteChanged;
@@ -26,7 +28,14 @@ namespace Quiz.Model.Navigation
 
         public void Execute(object parameter)
         {
-            _navStore.CurrentViewModel = new CreateQuestionViewModel(_navStore);
+            if (string.IsNullOrEmpty(_viewModel.Name))
+            {
+                MessageBox.Show("Nazwa Quizu nie może być pusta");
+            }
+            else
+            {
+                _navStore.CurrentViewModel = new CreateQuestionViewModel(_navStore, _viewModel);
+            }
         }
     }
 }

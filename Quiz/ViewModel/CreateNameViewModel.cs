@@ -12,13 +12,26 @@ namespace Quiz.ViewModel
 {
     internal class CreateNameViewModel : BaseViewModel
     {
+        private string _name;
+        public event Action<string> NameUpdated;
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; 
+            OnPropertyChanged(nameof(Name));
+            }
+        }
+
         public ICommand NavigateToCreateCommand { get; }
-        public ICommand NavigateToCreateQuestionCommand { get; }
+        public ICommand NavigateToCreateQuestionCommand { get; set; }
+
 
         public CreateNameViewModel(NavigationStore navStore)
         {
             NavigateToCreateCommand = new NavigateToCreateCommand(navStore);
-            NavigateToCreateQuestionCommand = new NavigateToCreateQuestionCommand(navStore);
+            NavigateToCreateQuestionCommand = new NavigateToCreateQuestionCommand(navStore, this);
         }
+
     }
 }
