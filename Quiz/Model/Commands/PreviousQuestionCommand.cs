@@ -38,7 +38,7 @@ namespace Quiz.Model.Commands
                     !string.IsNullOrEmpty(_createQuestionViewModel.answerD) &&
                     !string.IsNullOrEmpty(_createQuestionViewModel.correctAnswer))
                 {
-                    Question prevQue = new Question( _createQuestionViewModel.theQuestion,
+                    Question prevQue = new Question(_createQuestionViewModel.creatingQuiz.iterator, _createQuestionViewModel.theQuestion,
                                               _createQuestionViewModel.answerA,
                                               _createQuestionViewModel.answerB,
                                               _createQuestionViewModel.answerC,

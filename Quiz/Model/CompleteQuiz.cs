@@ -6,19 +6,26 @@ using System.Threading.Tasks;
 
 namespace Quiz.Model
 {
-    internal class CompleteQuiz
+    public class CompleteQuiz
     {
         private string nameOfTheQuiz;
-        List<Question> questionlist;
+        private int _id;
 
-        public string NameOfTheQuiz { get; set; }
-
-        public List<Question> Questions { get => questionlist; }
-
-        public CompleteQuiz(string nameOfTheQuiz, List<Question> questionlist)
+        public string NameOfTheQuiz
         {
-            this.nameOfTheQuiz = nameOfTheQuiz;
-            this.questionlist = questionlist;
+            get { return nameOfTheQuiz; }
+            set { nameOfTheQuiz = value; }
+        }
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public CompleteQuiz(int id, string nameOfTheQuiz)
+        {
+            Id = id;
+            NameOfTheQuiz = nameOfTheQuiz;
         }
     }
 }

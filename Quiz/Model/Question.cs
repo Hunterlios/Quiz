@@ -58,8 +58,9 @@ namespace Quiz.Model
             set { correctAnswer = value; }
         }
 
-        public Question(string theQuestion, string answerA, string answerB, string answerC, string answerD, string correctAnswer)
+        public Question(int id, string theQuestion, string answerA, string answerB, string answerC, string answerD, string correctAnswer)
         {
+            this._id = id;
             this.theQuestion = theQuestion;
             this.answerA = answerA;
             this.answerB = answerB;

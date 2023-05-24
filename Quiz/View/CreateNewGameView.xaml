@@ -31,10 +31,12 @@
         <Button FontSize="20" Margin="186,80,186,0" Content="Graj" Background="White" Grid.Column="1" Grid.Row="3"/>
         <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Background="White" Foreground="Black" 
              FontSize="20" Content="Wybierz Quiz i rozpocznij grę:" Grid.Row="1" Height="62" Width="536"/>
-        <ListBox Margin="20,92,20,92" Grid.Column="1" Grid.RowSpan="3" d:ItemsSource="{d:SampleData ItemCount=3}" Grid.Row="1" HorizontalContentAlignment="Center">
-            <ListBoxItem Content="Quiz 1" FontSize="20"/>
-            <ListBoxItem Content="Quiz 2" FontSize="20"/>
-            <ListBoxItem Content="Quiz 3" FontSize="20"/>
+        <ListBox Margin="20,92,20,92" Grid.Column="1" Grid.RowSpan="3" x:Name="{}" Grid.Row="1" HorizontalContentAlignment="Center">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <ListBoxItem Content="{Binding NameOfTheQuiz}"></ListBoxItem>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
 
 

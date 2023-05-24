@@ -42,7 +42,7 @@ namespace Quiz.Model.Commands
                 if (_createQuestionViewModel.isConfirmed)
                 {
 
-                    Question currQue = new Question(_createQuestionViewModel.theQuestion,
+                    Question currQue = new Question(_createQuestionViewModel.creatingQuiz.iterator, _createQuestionViewModel.theQuestion,
                                               _createQuestionViewModel.answerA,
                                               _createQuestionViewModel.answerB,
                                               _createQuestionViewModel.answerC,
@@ -56,17 +56,6 @@ namespace Quiz.Model.Commands
                     {
                         _createQuestionViewModel.creatingQuiz.questions[_createQuestionViewModel.creatingQuiz.iterator] = currQue;
                     }
-
-                    CompleteQuiz completeQuiz = new CompleteQuiz(_createQuestionViewModel.creatingQuiz.Name, _createQuestionViewModel.creatingQuiz.questions);
-
-                    int i = 0;
-                    foreach (Question que in completeQuiz.Questions)
-                    {
-                        completeQuiz.Questions[i].Id = i+1;
-                        i++;
-                    }
-
-                    MessageBox.Show(completeQuiz.ToString());
                 }
                 else
                 {

@@ -37,12 +37,10 @@ namespace Quiz.Model.Commands
             !string.IsNullOrEmpty(_createQuestionViewModel.correctAnswer))
             {
 
-                if (_createQuestionViewModel.creatingQuiz.iterator == _createQuestionViewModel.creatingQuiz.questions.Count
-                    )
+                if (_createQuestionViewModel.creatingQuiz.iterator == _createQuestionViewModel.creatingQuiz.questions.Count)
                 {
-                    _createQuestionViewModel.creatingQuiz.iterator += 1;
-                    _createQuestionViewModel.QuestionNumber += 1;
-                    Question currQue = new Question(_createQuestionViewModel.theQuestion,
+                    
+                    Question currQue = new Question(_createQuestionViewModel.QuestionNumber, _createQuestionViewModel.theQuestion,
                                                 _createQuestionViewModel.answerA,
                                                 _createQuestionViewModel.answerB,
                                                 _createQuestionViewModel.answerC,
@@ -54,10 +52,13 @@ namespace Quiz.Model.Commands
                     _createQuestionViewModel.answerB = String.Empty;
                     _createQuestionViewModel.answerC = String.Empty;
                     _createQuestionViewModel.answerD = String.Empty;
+
+                    _createQuestionViewModel.creatingQuiz.iterator += 1;
+                    _createQuestionViewModel.QuestionNumber += 1;
                 }
                 else if (_createQuestionViewModel.creatingQuiz.iterator == _createQuestionViewModel.creatingQuiz.questions.Count - 1)
                 {
-                    Question prevQue = new Question(_createQuestionViewModel.theQuestion,
+                    Question prevQue = new Question(_createQuestionViewModel.QuestionNumber, _createQuestionViewModel.theQuestion,
                                                _createQuestionViewModel.answerA,
                                                _createQuestionViewModel.answerB,
                                                _createQuestionViewModel.answerC,
@@ -75,7 +76,7 @@ namespace Quiz.Model.Commands
                 else 
                 {
                     //update currQue
-                    Question prevQue = new Question(_createQuestionViewModel.theQuestion,
+                    Question prevQue = new Question(_createQuestionViewModel.QuestionNumber, _createQuestionViewModel.theQuestion,
                                                 _createQuestionViewModel.answerA,
                                                 _createQuestionViewModel.answerB,
                                                 _createQuestionViewModel.answerC,

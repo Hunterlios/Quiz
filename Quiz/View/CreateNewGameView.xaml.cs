@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Quiz.Model;
+using Quiz.Model.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,11 @@ namespace Quiz.View
     /// </summary>
     public partial class CreateNewGameView : UserControl
     {
+
         public CreateNewGameView()
         {
             InitializeComponent();
+            
         }
     }
 }
