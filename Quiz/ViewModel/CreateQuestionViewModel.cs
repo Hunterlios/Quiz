@@ -21,8 +21,30 @@ namespace Quiz.ViewModel
         private string _answerC;
         private string _answerD;
         private string _correctAnswer;
+        private int _questionNumber = 1;
+        public bool isConfirmed;
+        public bool goBack;
         private CreateNameViewModel _nameViewModel;
         public CreatingQuiz creatingQuiz;
+
+
+        public ICommand NavigateToCreateNameCommand { get; }
+        public ICommand CreateNextQuestionCommand { get; }
+        public ICommand PreviousQuestionCommand { get; }
+        public ICommand ConfirmCreatingCommand { get; }
+
+        public CreateQuestionViewModel(NavigationStore navStore, CreateNameViewModel createNameViewModel)
+        {
+            isConfirmed = false;
+            goBack = false;
+            NavigateToCreateNameCommand = new NavigateToCreateNameCommand(navStore, this);
+            CreateNextQuestionCommand = new CreateNextQuestionCommand(this);
+            PreviousQuestionCommand = new PreviousQuestionCommand(this);
+            ConfirmCreatingCommand = new ConfirmCreatingCommand(this);
+            _nameViewModel = createNameViewModel;
+            QuizName = _nameViewModel.Name;
+            creatingQuiz = new CreatingQuiz(_nameViewModel.Name);
+        }
 
         public string QuizName
         {
@@ -35,6 +57,12 @@ namespace Quiz.ViewModel
                     OnPropertyChanged(nameof(QuizName));
                 }
             }
+        }
+
+        public int QuestionNumber
+        {
+            get { return _questionNumber; }
+            set { _questionNumber = value; OnPropertyChanged(nameof(QuestionNumber)); }
         }
 
         public string theQuestion
@@ -73,17 +101,6 @@ namespace Quiz.ViewModel
             set { _correctAnswer = value; OnPropertyChanged(nameof(correctAnswer)); }
         }
 
-
-        public ICommand NavigateToCreateNameCommand { get; }
-        public ICommand CreateNextQuestionCommand { get; }
-
-        public CreateQuestionViewModel(NavigationStore navStore, CreateNameViewModel createNameViewModel)
-        {   
-            NavigateToCreateNameCommand = new NavigateToCreateNameCommand(navStore);
-            CreateNextQuestionCommand = new CreateNextQuestionCommand(this);
-            _nameViewModel = createNameViewModel;
-            QuizName = _nameViewModel.Name;
-            creatingQuiz = new CreatingQuiz(_nameViewModel.Name);
-        }
+       
     }
 }

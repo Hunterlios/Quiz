@@ -8,17 +8,30 @@ namespace Quiz.Model
 {
     internal class CreatingQuiz
     {
-        private string Name { get; set; }
-        public List<Question> questions = new List<Question>();
+        public string Name { get; set; }
+        public List<Question> questions;
         public int iterator;
-
 
         public CreatingQuiz(string name)
         {
             iterator = 0;
+            questions = new List<Question>();
             Name = name;
         }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Quiz Name: {Name}");
+            sb.AppendLine("Questions:");
+
+            foreach (Question question in questions)
+            {
+                sb.AppendLine(question.ToString());
+            }
+
+            return sb.ToString();
+        }
 
     }
 }

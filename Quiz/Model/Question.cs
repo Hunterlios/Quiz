@@ -8,12 +8,19 @@ namespace Quiz.Model
 {
     internal class Question
     {
+        private int _id;
         private string theQuestion;
         private string answerA;
         private string answerB;
         private string answerC;
         private string answerD;
         private string correctAnswer;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
         public string TheQuestion
         {
@@ -59,6 +66,16 @@ namespace Quiz.Model
             this.answerC = answerC;
             this.answerD = answerD;
             this.correctAnswer = correctAnswer;
+        }
+
+        public override string ToString()
+        {
+            return $"Question: {theQuestion}\n" +
+                   $"A. {answerA}\n" +
+                   $"B. {answerB}\n" +
+                   $"C. {answerC}\n" +
+                   $"D. {answerD}\n" +
+                   $"Correct Answer: {correctAnswer}";
         }
     }
 }

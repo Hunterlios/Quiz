@@ -12,11 +12,12 @@ namespace Quiz.Model.Commands
     internal class CreateNextQuestionCommand : ICommand
     {
 
+
         CreateQuestionViewModel _createQuestionViewModel;
 
         public CreateNextQuestionCommand(CreateQuestionViewModel createQuestionViewModel)
         {
-           _createQuestionViewModel = createQuestionViewModel;
+            _createQuestionViewModel = createQuestionViewModel;
         }
 
         public event EventHandler? CanExecuteChanged;
@@ -35,18 +36,66 @@ namespace Quiz.Model.Commands
             !string.IsNullOrEmpty(_createQuestionViewModel.answerD) &&
             !string.IsNullOrEmpty(_createQuestionViewModel.correctAnswer))
             {
-                Question currQue = new Question(_createQuestionViewModel.theQuestion,
+
+                if (_createQuestionViewModel.creatingQuiz.iterator == _createQuestionViewModel.creatingQuiz.questions.Count
+                    )
+                {
+                    _createQuestionViewModel.creatingQuiz.iterator += 1;
+                    _createQuestionViewModel.QuestionNumber += 1;
+                    Question currQue = new Question(_createQuestionViewModel.theQuestion,
                                                 _createQuestionViewModel.answerA,
                                                 _createQuestionViewModel.answerB,
                                                 _createQuestionViewModel.answerC,
                                                 _createQuestionViewModel.answerD,
                                                 _createQuestionViewModel.correctAnswer);
-                _createQuestionViewModel.creatingQuiz.questions.Add(currQue);
-                _createQuestionViewModel.creatingQuiz.iterator += 1;
+                    _createQuestionViewModel.creatingQuiz.questions.Add(currQue);
+                    _createQuestionViewModel.theQuestion = String.Empty;
+                    _createQuestionViewModel.answerA = String.Empty;
+                    _createQuestionViewModel.answerB = String.Empty;
+                    _createQuestionViewModel.answerC = String.Empty;
+                    _createQuestionViewModel.answerD = String.Empty;
+                }
+                else if (_createQuestionViewModel.creatingQuiz.iterator == _createQuestionViewModel.creatingQuiz.questions.Count - 1)
+                {
+                    Question prevQue = new Question(_createQuestionViewModel.theQuestion,
+                                               _createQuestionViewModel.answerA,
+                                               _createQuestionViewModel.answerB,
+                                               _createQuestionViewModel.answerC,
+                                               _createQuestionViewModel.answerD,
+                                               _createQuestionViewModel.correctAnswer);
+                    _createQuestionViewModel.creatingQuiz.questions[_createQuestionViewModel.creatingQuiz.iterator] = prevQue;
+                    _createQuestionViewModel.creatingQuiz.iterator += 1;
+                    _createQuestionViewModel.QuestionNumber += 1;
+                    _createQuestionViewModel.theQuestion = String.Empty;
+                    _createQuestionViewModel.answerA = String.Empty;
+                    _createQuestionViewModel.answerB = String.Empty;
+                    _createQuestionViewModel.answerC = String.Empty;
+                    _createQuestionViewModel.answerD = String.Empty;
+                }
+                else 
+                {
+                    //update currQue
+                    Question prevQue = new Question(_createQuestionViewModel.theQuestion,
+                                                _createQuestionViewModel.answerA,
+                                                _createQuestionViewModel.answerB,
+                                                _createQuestionViewModel.answerC,
+                                                _createQuestionViewModel.answerD,
+                                                _createQuestionViewModel.correctAnswer);
+                    _createQuestionViewModel.creatingQuiz.questions[_createQuestionViewModel.creatingQuiz.iterator] = prevQue;
+                    //move to the next Que
+                    _createQuestionViewModel.creatingQuiz.iterator += 1;
+                    _createQuestionViewModel.QuestionNumber += 1;
+                    Question currQue = _createQuestionViewModel.creatingQuiz.questions[_createQuestionViewModel.creatingQuiz.iterator];
+                    _createQuestionViewModel.theQuestion = currQue.TheQuestion;
+                    _createQuestionViewModel.answerA = currQue.AnswerA;
+                    _createQuestionViewModel.answerB = currQue.AnswerB;
+                    _createQuestionViewModel.answerC = currQue.AnswerC;
+                    _createQuestionViewModel.answerD = currQue.AnswerD;
+                }
+                
             }
             else
             {
-                // Show warning window
                 MessageBox.Show("Nie smaż lola, uzpełnij wszystkie pola");
             }
 

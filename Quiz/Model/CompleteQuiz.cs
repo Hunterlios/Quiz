@@ -13,7 +13,7 @@ namespace Quiz.Model
 
         public string NameOfTheQuiz { get; set; }
 
-        public List<Question> Questions { get; set; }
+        public List<Question> Questions { get => questionlist; }
 
         public CompleteQuiz(string nameOfTheQuiz, List<Question> questionlist)
         {

@@ -32,35 +32,42 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
         <Button Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="20" Margin="40px" Content="Wróć" Command="{Binding NavigateToCreateNameCommand}"/>
-        <Label Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
-             FontSize="20" Content="{Binding QuizName}"/>
-        <TextBox x:Name="theQuestionTextBox" Grid.ColumnSpan="4" Margin="20px" Grid.Column="1" Grid.Row="2" Text="{Binding theQuestion}"/>
-        <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
-             FontSize="20" Content="Wpisz odpowiedź A"/>
-        <TextBox x:Name="answerATextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="1" Grid.Row="4" Text="{Binding answerA}"/>
-
-        <Label Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
-             FontSize="20" Content="Wpisz odpowiedź B"/>
-        <TextBox x:Name="answerBTextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="3" Grid.Row="4" Text="{Binding answerB}"/>
-
-        <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
-             FontSize="20" Content="Wpisz odpowiedź C"/>
-        <TextBox x:Name="answerCTextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="1" Grid.Row="6" Text="{Binding answerC}"/>
-
-        <Label Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
-             FontSize="20" Content="Wpisz odpowiedź D"/>
-        <TextBox x:Name="answerDTextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="3" Grid.Row="6" Text="{Binding answerD}"/>
-        <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
-             FontSize="20" Content="Wybierz poprawną odpowiedź: "/>
-        <ComboBox x:Name="answerComboBox"  Text="Poprawna od" FontSize="20" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="7" Margin="20px" SelectedItem="{Binding correctAnswer, Mode=TwoWay}"/>
-        <Button x:Name="nextQuestionCreateButton" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="8" FontSize="20" Margin="10px" Content="Następne pytanie" Command="{Binding CreateNextQuestionCommand}"/>
-        <Button x:Name="previousQuestionCreateButton" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="8" FontSize="20" Margin="10px" Content="Poprzednie pytanie" />
         
-        <Button Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="9" FontSize="20" Margin="15px" Content="Zatwierdź i zakończ tworzenie" />
+        <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="30" Content="{Binding QuizName}"/>
+        <Label Grid.ColumnSpan="1" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="20" Content="Pytanie numer: "/>
+        <Label Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="25" Content="Wpisz treść pytania:"/>
+        <Label Grid.ColumnSpan="1" Grid.Column="4" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="30" Content="{Binding QuestionNumber}"/>
+        <TextBox x:Name="theQuestionTextBox" Grid.ColumnSpan="4" Margin="20px" Grid.Column="1" Grid.Row="3" Text="{Binding theQuestion}"/>
+        <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="20" Content="Wpisz odpowiedź A"/>
+        <TextBox x:Name="answerATextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="1" Grid.Row="5" Text="{Binding answerA}"/>
+
+        <Label Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="20" Content="Wpisz odpowiedź B"/>
+        <TextBox x:Name="answerBTextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="3" Grid.Row="5" Text="{Binding answerB}"/>
+
+        <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="20" Content="Wpisz odpowiedź C"/>
+        <TextBox x:Name="answerCTextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="1" Grid.Row="7" Text="{Binding answerC}"/>
+
+        <Label Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="20" Content="Wpisz odpowiedź D"/>
+        <TextBox x:Name="answerDTextBox" Grid.ColumnSpan="2" Margin="20px" Grid.Column="3" Grid.Row="7" Text="{Binding answerD}"/>
+        <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
+             FontSize="20" Content="Wybierz poprawną odpowiedź: "/>
+        <ComboBox x:Name="answerComboBox"  Text="Poprawna od" FontSize="20" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="8" Margin="20px" SelectedItem="{Binding correctAnswer, Mode=TwoWay}"/>
+        <Button x:Name="nextQuestionCreateButton" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="9" FontSize="20" Margin="10px" Content="Następne pytanie" Command="{Binding CreateNextQuestionCommand}"/>
+        <Button x:Name="previousQuestionCreateButton" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="9" FontSize="20" Margin="10px" Content="Poprzednie pytanie" Command="{Binding PreviousQuestionCommand}" />
+
+        <Button Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="10" FontSize="20" Margin="15px" Content="Zatwierdź i zakończ tworzenie" Command="{Binding ConfirmCreatingCommand}" />
 
     </Grid>
 </UserControl>

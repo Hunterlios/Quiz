@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Quiz.Model.Navigation
@@ -12,8 +13,11 @@ namespace Quiz.Model.Navigation
     {
         private readonly NavigationStore _navStore;
 
-        public NavigateToCreateNameCommand(NavigationStore navStore)
+        CreateQuestionViewModel _createViewModel;
+
+        public NavigateToCreateNameCommand(NavigationStore navStore, CreateQuestionViewModel viewModel)
         {
+            _createViewModel = viewModel;
             _navStore = navStore;
         }
 
@@ -26,7 +30,13 @@ namespace Quiz.Model.Navigation
 
         public void Execute(object parameter)
         {
+            if (_createViewModel==null || _createViewModel.goBack )
             _navStore.CurrentViewModel = new CreateNameViewModel(_navStore);
+            else
+            {
+                _createViewModel.goBack = !_createViewModel.goBack;
+                MessageBox.Show("Wszystkie niezapisane zmiany zostaną utracone! Jeśli mimo wszystko chcesz wyjść, kliknij jeszcze raz");
+            }
         }
     }
 }
