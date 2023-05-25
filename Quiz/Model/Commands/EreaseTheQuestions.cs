@@ -37,7 +37,7 @@ namespace Quiz.Model.Commands
                 createViewModel.eraseMode = !createViewModel.eraseMode;
                 createViewModel.RemoveButtonContent = "Tryb usuwania, kliknij, aby przerwać";
 
-                //mechanism of deleting
+                //mechanism of deleting 
 
 
             }
