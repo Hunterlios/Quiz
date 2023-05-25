@@ -1,4 +1,5 @@
 ﻿using Quiz.Model;
+using Quiz.Model.Data;
 using Quiz.Model.Navigation;
 using Quiz.ViewModel.BaseClass;
 using System;
@@ -13,7 +14,8 @@ namespace Quiz.ViewModel
     public class CreateNameViewModel : BaseViewModel
     {
         private string _name;
-        public event Action<string> NameUpdated;
+        public List<Question> questionsEdit = new List<Question>();
+        public Boolean isEdit;
 
         public string Name
         {
@@ -26,9 +28,18 @@ namespace Quiz.ViewModel
         public ICommand NavigateToCreateCommand { get; }
         public ICommand NavigateToCreateQuestionCommand { get; set; }
 
-
         public CreateNameViewModel(NavigationStore navStore)
         {
+            isEdit = false;
+            NavigateToCreateCommand = new NavigateToCreateCommand(navStore);
+            NavigateToCreateQuestionCommand = new NavigateToCreateQuestionCommand(navStore, this);
+        }
+
+        public CreateNameViewModel(NavigationStore navStore, string quizName, int quizId)
+        {
+            Name = quizName;
+            questionsEdit = DataContext.GetQuestions(quizId);
+            isEdit = true;
             NavigateToCreateCommand = new NavigateToCreateCommand(navStore);
             NavigateToCreateQuestionCommand = new NavigateToCreateQuestionCommand(navStore, this);
         }

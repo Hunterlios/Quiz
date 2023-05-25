@@ -35,7 +35,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="20" Margin="40px" Content="Wróć" Command="{Binding NavigateToCreateNameCommand}"/>
+        <Button Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="20" Margin="40px" Content="Wróć" Command="{Binding NavigateMenuCommand}"/>
         
         <Label Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
              FontSize="30" Content="{Binding QuizName}"/>

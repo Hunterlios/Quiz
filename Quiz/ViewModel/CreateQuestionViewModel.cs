@@ -28,7 +28,7 @@ namespace Quiz.ViewModel
         public CreatingQuiz creatingQuiz;
 
 
-        public ICommand NavigateToCreateNameCommand { get; }
+        public ICommand NavigateMenuCommand { get; }
         public ICommand CreateNextQuestionCommand { get; }
         public ICommand PreviousQuestionCommand { get; }
         public ICommand ConfirmCreatingCommand { get; }
@@ -37,13 +37,30 @@ namespace Quiz.ViewModel
         {
             isConfirmed = false;
             goBack = false;
-            NavigateToCreateNameCommand = new NavigateToCreateNameCommand(navStore, this);
+            NavigateMenuCommand = new NavigateMenuCommand(navStore, this);
             CreateNextQuestionCommand = new CreateNextQuestionCommand(this);
             PreviousQuestionCommand = new PreviousQuestionCommand(this);
             ConfirmCreatingCommand = new ConfirmCreatingCommand(this);
             _nameViewModel = createNameViewModel;
             QuizName = _nameViewModel.Name;
-            creatingQuiz = new CreatingQuiz(_nameViewModel.Name);
+
+           
+
+            if (_nameViewModel.isEdit)
+            {
+                creatingQuiz = new CreatingQuiz(_nameViewModel.Name, _nameViewModel.questionsEdit);
+                theQuestion = creatingQuiz.questions[creatingQuiz.iterator].TheQuestion;
+                answerA = creatingQuiz.questions[creatingQuiz.iterator].AnswerA;
+                answerB = creatingQuiz.questions[creatingQuiz.iterator].AnswerB;
+                answerC = creatingQuiz.questions[creatingQuiz.iterator].AnswerC;
+                answerD = creatingQuiz.questions[creatingQuiz.iterator].AnswerD;
+                correctAnswer = creatingQuiz.questions[creatingQuiz.iterator].CorrectAnswer;
+            }
+            else
+            {
+                creatingQuiz = new CreatingQuiz(_nameViewModel.Name);
+            }
+            
         }
 
         public string QuizName

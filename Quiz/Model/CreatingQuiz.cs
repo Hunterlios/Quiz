@@ -19,6 +19,13 @@ namespace Quiz.Model
             Name = name;
         }
 
+        public CreatingQuiz(string name, List<Question> que)
+        {
+            iterator = 0;
+            questions = que;
+            Name = name;
+        }
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

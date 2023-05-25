@@ -1,4 +1,5 @@
-﻿using Quiz.ViewModel;
+﻿using Quiz.Model.Data;
+using Quiz.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,11 @@ namespace Quiz.Model.Commands
                     {
                         _createQuestionViewModel.creatingQuiz.questions[_createQuestionViewModel.creatingQuiz.iterator] = currQue;
                     }
+
+                    int quizId = DataContext.GetQuizzes().Count + 1;
+
+                    DataContext.AddQuestions(quizId, _createQuestionViewModel.creatingQuiz.Name, _createQuestionViewModel.creatingQuiz.questions);
+
                 }
                 else
                 {

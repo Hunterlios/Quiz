@@ -52,6 +52,7 @@ namespace Quiz.Model.Commands
                     _createQuestionViewModel.answerB = String.Empty;
                     _createQuestionViewModel.answerC = String.Empty;
                     _createQuestionViewModel.answerD = String.Empty;
+                    _createQuestionViewModel.correctAnswer = String.Empty;
 
                     _createQuestionViewModel.creatingQuiz.iterator += 1;
                     _createQuestionViewModel.QuestionNumber += 1;
@@ -72,6 +73,7 @@ namespace Quiz.Model.Commands
                     _createQuestionViewModel.answerB = String.Empty;
                     _createQuestionViewModel.answerC = String.Empty;
                     _createQuestionViewModel.answerD = String.Empty;
+                    _createQuestionViewModel.correctAnswer = String.Empty;
                 }
                 else 
                 {
@@ -92,6 +94,7 @@ namespace Quiz.Model.Commands
                     _createQuestionViewModel.answerB = currQue.AnswerB;
                     _createQuestionViewModel.answerC = currQue.AnswerC;
                     _createQuestionViewModel.answerD = currQue.AnswerD;
+                    _createQuestionViewModel.correctAnswer = currQue.CorrectAnswer;
                 }
                 
             }

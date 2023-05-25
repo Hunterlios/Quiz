@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\
+C:\Users\48509\Desktop\FinalQuiz\Quiz\obj\Debug\net6.0-windows\
 Quiz
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\App.xaml
+C:\Users\48509\Desktop\FinalQuiz\Quiz\App.xaml
 7-1683245721
 1-802448373
 36-1078376065
-1991906356175
+1991401794248
 View\CreateNameView.xaml;View\CreateNewGameView.xaml;View\CreateQuestionView.xaml;View\CreateView.xaml;View\MainWindowView.xaml;View\MenuView.xaml;View\QuizEditListQueView.xaml;
 
 False

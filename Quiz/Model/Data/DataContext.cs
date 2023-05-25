@@ -98,64 +98,63 @@ namespace Quiz.Model.Data
             }
         }
 
-        //public static void AddQuestions(int quizId, List<QuestionViewModel> questions)
-        //{
-        //    using (var conn = new SQLiteConnection(LoadConnectionString()))
-        //    {
-        //        conn.Open();
+        public static void AddQuestions(int quizId, string quizName, List<Question> questions)
+        {
+            using (var conn = new SQLiteConnection(LoadConnectionString()))
+            {
+                conn.Open();
 
-        //        //Adding questions and answers
-        //        foreach (var question in questions)
-        //        {
-        //            //Adding questions
-        //            string insertQuestionSql = "INSERT INTO Questions (Text, QuizID) VALUES (@text, @quizId);";
-        //            var insertQuestionCommand = new SQLiteCommand(insertQuestionSql, conn);
-        //            insertQuestionCommand.Parameters.AddWithValue("@text", question.QuestionModel.Question);
-        //            insertQuestionCommand.Parameters.AddWithValue("@quizId", quizId);
-        //            insertQuestionCommand.ExecuteNonQuery();
+                using (SQLiteTransaction transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
 
-        //            //Getting ID of added questions
-        //            string selectQuestionSql = "SELECT last_insert_rowid();";
-        //            var selectQuestionCommand = new SQLiteCommand(selectQuestionSql, conn);
-        //            int questionId = Convert.ToInt32(selectQuestionCommand.ExecuteScalar());
+                        //Adding Quiz
+                        string insertQuizSql = "INSERT INTO Quizes (ID, Name) VALUES (@id, @name);";
+                        var insertQuizCommand = new SQLiteCommand(insertQuizSql, conn);
+                        insertQuizCommand.Parameters.AddWithValue("@id", quizId);
+                        insertQuizCommand.Parameters.AddWithValue("@name", quizName);
+                        insertQuizCommand.ExecuteNonQuery();
 
-        //            //Adding answers
-        //            foreach (var answer in question.QuestionModel.Answers)
-        //            {
-        //                string insertAnswerSql = "INSERT INTO Answers (Text, IsCorrect, QuestionID) VALUES (@text, @isCorrect, @questionId);";
-        //                var insertAnswerCommand = new SQLiteCommand(insertAnswerSql, conn);
-        //                insertAnswerCommand.Parameters.AddWithValue("@text", answer.Answer);
-        //                insertAnswerCommand.Parameters.AddWithValue("@isCorrect", answer.IsCorrect);
-        //                insertAnswerCommand.Parameters.AddWithValue("@questionId", questionId);
-        //                insertAnswerCommand.ExecuteNonQuery();
-        //            }
-        //        }
-        //        conn.Close();
-        //    }
-        //}
+                        //Getting ID of added questions
 
-        //public static List<CompleteQuiz> GetQuizes()
-        //{
-        //    List<CompleteQuiz> quizesFound = new List<CompleteQuiz>();
-        //    var conn = new SQLiteConnection("Data Source=Quizes.db;Version=3;");
-        //    conn.Open();
+                        string countQuery = "SELECT COUNT(*) FROM Questions";
+                        SQLiteCommand command = new SQLiteCommand(countQuery, conn);
+                        int rowCount = Convert.ToInt32(command.ExecuteScalar());
 
-        //    string selectQuizesSql = "SELECT * FROM Quizes;";
-        //    var selectQuizesCommand = new SQLiteCommand(selectQuizesSql, conn);
-        //    SQLiteCommand command = new SQLiteCommand(selectQuizesSql, conn);
-        //    SQLiteDataReader reader = command.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        int quizId = reader.GetInt32(0);
-        //        string quizName = reader.GetString(1);
-        //        var quizInfo = new CompleteQuiz(reader.GetInt32(0), reader.GetString(1));
-        //        quizesFound.Add(quizInfo);
-        //    }
-        //    reader.Close();
-        //    conn.Close();
+                        //Adding Answers to Quiz
+                        foreach (var que in questions)
+                        {
+                            rowCount++;
+                            string insertQuestionSql = "INSERT INTO Questions (ID, Text, A, B, C, D, IsCorrect, QuizID) VALUES (@id, @text, @a, @b, @c, @d, @isCorrect, @quizID);";
+                            var insertQuestionCommand = new SQLiteCommand(insertQuestionSql, conn);
+                            insertQuestionCommand.Parameters.AddWithValue("@id", rowCount);
+                            insertQuestionCommand.Parameters.AddWithValue("@text", que.TheQuestion);
+                            insertQuestionCommand.Parameters.AddWithValue("@a", que.AnswerA);
+                            insertQuestionCommand.Parameters.AddWithValue("@b", que.AnswerB);
+                            insertQuestionCommand.Parameters.AddWithValue("@c", que.AnswerC);
+                            insertQuestionCommand.Parameters.AddWithValue("@d", que.AnswerD);
+                            insertQuestionCommand.Parameters.AddWithValue("@isCorrect", que.CorrectAnswer);
+                            insertQuestionCommand.Parameters.AddWithValue("@quizId", quizId);
+                            insertQuestionCommand.ExecuteNonQuery();
+                        }
 
-        //    return quizesFound;
-        //}
+
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle any exceptions that occur during the transaction
+                        Console.WriteLine("An error occurred: " + ex.Message);
+                        // Rollback the transaction to revert any changes
+                        transaction.Rollback();
+                    }
+                }              
+      
+                conn.Close();
+            }
+        }
+
 
         public static List<CompletedQuiz> GetQuizzes()
         {
@@ -186,12 +185,12 @@ namespace Quiz.Model.Data
             {
                 conn.Open();
 
-                string selectQuestions = "SELECT ID, Text FROM Questions Where QuizID = @quizID";
+                string selectQuestions = "SELECT ID, Text, A, B, C, D, IsCorrect, QuizID FROM Questions Where QuizID = @quizID";
                 SQLiteCommand selectQuestionsCommand = new SQLiteCommand(selectQuestions, conn);
                 selectQuestionsCommand.Parameters.AddWithValue("@quizID", quizID);
 
                 SQLiteDataReader reader = selectQuestionsCommand.ExecuteReader();
-                int questionNumber = 1;
+
                 while (reader.Read())
                 {
                     questions.Add(new Question
@@ -202,7 +201,7 @@ namespace Quiz.Model.Data
                         reader.GetString(4),
                         reader.GetString(5),
                         reader.GetString(6)));
-                    questionNumber++;
+
                 }
 
                 reader.Close();

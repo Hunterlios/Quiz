@@ -63,6 +63,7 @@ namespace Quiz.Model.Commands
                     _createQuestionViewModel.answerB = currQue.AnswerB;
                     _createQuestionViewModel.answerC = currQue.AnswerC;
                     _createQuestionViewModel.answerD = currQue.AnswerD;
+                    _createQuestionViewModel.correctAnswer = currQue.CorrectAnswer;
                 }
                 else
                 {

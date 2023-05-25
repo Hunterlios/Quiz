@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using Quiz.Model;
+using Quiz.Model.Data;
 using Quiz.Model.Navigation;
 using Quiz.ViewModel.BaseClass;
 
@@ -14,7 +15,8 @@ namespace Quiz.ViewModel
     internal class CreateViewModel: BaseViewModel
     {
         private string _selectedItem;
-
+        private List<CompletedQuiz> quizes;
+        private NavigationStore navigationStore;
         public ICommand NavigateMenuCommand { get; }
         public ICommand NavigateToCreateNameCommand { get; }
 
@@ -32,29 +34,35 @@ namespace Quiz.ViewModel
 
         public CreateViewModel(NavigationStore navStore)
         {
+            navigationStore = navStore;
+            quizes = new List<CompletedQuiz>();
+
+            DataContext.GetQuizzes().ForEach(x => quizes.Add(x));
+
+            List<string> nameOfQuizes = new List<string>();
+            foreach (var quiz in quizes)
+            {
+                nameOfQuizes.Add(quiz.NameOfTheQuiz);
+            }
+
+            //Add(DataContext.GetQuestions(currQuiz.Id));
+
             NavigateMenuCommand = new NavigateMenuCommand(navStore);
             NavigateToCreateNameCommand = new NavigateToCreateNameCommand(navStore, null);
-            Items = new List<string>
-            {
-            "Item 1",
-            "Item 2",
-            "Item 3",
-            "Item 4",
-            "Item 5",
-            "Item 6",
-            "Item 5",
-            "Item 6",
-            "Item 5",
-            "Item 6",
-            "Item 5",
-            "Item 6"
-
-            };
+            Items = nameOfQuizes;
         }
 
         private void showMess(string select)
         {
-            MessageBox.Show(select, "Selected Item");
+            foreach (var quiz in quizes)
+            {
+                if (quiz.NameOfTheQuiz == select)
+                {
+                    navigationStore.CurrentViewModel = new CreateNameViewModel(navigationStore, select, quiz.Id);
+                    MessageBox.Show(select, quiz.Id.ToString());
+                }
+                
+            }         
         }
 
     }

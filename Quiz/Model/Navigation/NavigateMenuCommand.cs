@@ -6,16 +6,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Quiz.ViewModel;
 using System.Windows.Input;
+using System.Windows;
 
 namespace Quiz.Model.Navigation
 {
     internal class NavigateMenuCommand : ICommand
     {
         private readonly NavigationStore _navStore;
-
+        CreateQuestionViewModel _createQuestionViewModel;
         public NavigateMenuCommand(NavigationStore navStore)
         {
            _navStore = navStore;
+        }
+        public NavigateMenuCommand(NavigationStore navStore, CreateQuestionViewModel createQuestionViewModel)
+        {
+            _createQuestionViewModel = createQuestionViewModel;
+            _navStore = navStore;
         }
 
         public event EventHandler? CanExecuteChanged;
@@ -27,7 +33,16 @@ namespace Quiz.Model.Navigation
 
         public void Execute(object parameter)
         {
-            _navStore.CurrentViewModel = new MenuViewModel(_navStore);
+            if (_createQuestionViewModel!=null && !_createQuestionViewModel.goBack)
+            {
+                _createQuestionViewModel.goBack = !_createQuestionViewModel.goBack;
+                MessageBox.Show("Wszystkie niezapisane zmiany zostaną utracone! Jeśli mimo wszystko chcesz wyjść, kliknij jeszcze raz");
+            }
+            else
+            {
+                _navStore.CurrentViewModel = new MenuViewModel(_navStore);
+            }
+            
         }
     }
 }
