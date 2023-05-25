@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\Quiz.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\Quiz.csproj",
         "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
         "outputPath": "D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\obj\\",
+=======
+    "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj",
+        "projectName": "Quiz",
+        "projectPath": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj",
+        "packagesPath": "C:\\Users\\48509\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\obj\\",
+>>>>>>> b34b06326b67cb2cec1c123331927183c7f05e36
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

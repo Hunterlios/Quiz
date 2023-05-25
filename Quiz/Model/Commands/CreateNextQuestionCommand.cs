@@ -100,7 +100,7 @@ namespace Quiz.Model.Commands
             }
             else
             {
-                MessageBox.Show("Nie smaż lola, uzpełnij wszystkie pola");
+                MessageBox.Show("Proszę uzupełnić wszystkie pola przed przejściem do następnego pytania");
             }
 
         }

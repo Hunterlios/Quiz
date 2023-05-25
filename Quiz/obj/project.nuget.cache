@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "8bPAH6+IIDRP6Fqk4gT3Z+YThl/PcqJ19dsxKo8ykB1jZa1leQgwHvT6Vx/eKVe20f2CiLXh0mxLtnEzQPcttg==",
   "success": true,
   "projectFilePath": "D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\Quiz.csproj",
+=======
+  "dgSpecHash": "AdQSpC56sLtdpViOCgIN5KO2aTcKEoglPihix9HB/ViYfRMo+s6rQcw0qemHkdU2OyRUkqMFM0jut4mkcJMUaQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj",
+>>>>>>> b34b06326b67cb2cec1c123331927183c7f05e36
   "expectedPackageFiles": [
     "C:\\Users\\jakub\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

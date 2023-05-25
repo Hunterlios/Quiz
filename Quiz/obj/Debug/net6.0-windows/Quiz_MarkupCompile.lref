@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< HEAD
 FD:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\View\CreateNameView.xaml;;
 FD:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\View\CreateNewGameView.xaml;;
 FD:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\View\CreateQuestionView.xaml;;
@@ -8,4 +9,13 @@ FD:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\View\MainWin
 FD:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\View\MenuView.xaml;;
 FD:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\View\QuizEditListQueView.xaml;;
 FD:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\View\QuizView.xaml;;
+=======
+FC:\Users\48509\Desktop\FinalQuiz2\Quiz\View\CreateNameView.xaml;;
+FC:\Users\48509\Desktop\FinalQuiz2\Quiz\View\CreateNewGameView.xaml;;
+FC:\Users\48509\Desktop\FinalQuiz2\Quiz\View\CreateQuestionView.xaml;;
+FC:\Users\48509\Desktop\FinalQuiz2\Quiz\View\CreateView.xaml;;
+FC:\Users\48509\Desktop\FinalQuiz2\Quiz\View\MainWindowView.xaml;;
+FC:\Users\48509\Desktop\FinalQuiz2\Quiz\View\MenuView.xaml;;
+FC:\Users\48509\Desktop\FinalQuiz2\Quiz\View\QuizEditListQueView.xaml;;
+>>>>>>> b34b06326b67cb2cec1c123331927183c7f05e36
 

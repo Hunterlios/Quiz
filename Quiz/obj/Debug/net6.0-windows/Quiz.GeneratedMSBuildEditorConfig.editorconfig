@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Quiz
+<<<<<<< HEAD
 build_property.ProjectDir = D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\
+=======
+build_property.ProjectDir = C:\Users\48509\Desktop\FinalQuiz2\Quiz\
+>>>>>>> b34b06326b67cb2cec1c123331927183c7f05e36

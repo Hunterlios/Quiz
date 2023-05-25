@@ -58,9 +58,24 @@ namespace Quiz.Model.Commands
                         _createQuestionViewModel.creatingQuiz.questions[_createQuestionViewModel.creatingQuiz.iterator] = currQue;
                     }
 
-                    int quizId = DataContext.GetQuizzes().Count + 1;
+                    List<CompletedQuiz> compQ = new List<CompletedQuiz>();
+                    compQ = DataContext.GetQuizzes();
+                    int maxID = 1;
+                    int quizId= 1;
+                    if (compQ != null)
+                    {
+                        foreach (var data in compQ)
+                        {
+                            if (data.Id > maxID)
+                                maxID = data.Id;
+                        }
+                        quizId = maxID + 1;
+                    }
 
                     DataContext.AddQuestions(quizId, _createQuestionViewModel.creatingQuiz.Name, _createQuestionViewModel.creatingQuiz.questions);
+                    MessageBox.Show("Utworzenie quizu powiodło się, kliknij 'ok', aby wrócić do menu głównego");
+                    _createQuestionViewModel.navStoreCQVM.CurrentViewModel = new MenuViewModel(_createQuestionViewModel.navStoreCQVM);
+
 
                 }
                 else
