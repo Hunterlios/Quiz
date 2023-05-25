@@ -32,6 +32,10 @@ namespace Quiz.Model
             {
                 MessageBox.Show("Nazwa Quizu nie może być pusta");
             }
+            else if (_viewModel.Name.Length > 30)
+            {
+                MessageBox.Show("Nazwa jest zbyt długa, musisz ją skrócić! (max 30 znaków)");
+            }
             else
             {
                 _navStore.CurrentViewModel = new CreateQuestionViewModel(_navStore, _viewModel);

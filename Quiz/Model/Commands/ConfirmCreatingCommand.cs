@@ -61,6 +61,9 @@ namespace Quiz.Model.Commands
                     int quizId = DataContext.GetQuizzes().Count + 1;
 
                     DataContext.AddQuestions(quizId, _createQuestionViewModel.creatingQuiz.Name, _createQuestionViewModel.creatingQuiz.questions);
+                    MessageBox.Show("Utworzenie quizu powiodło się, kliknij 'ok', aby wrócić do menu głównego");
+                    _createQuestionViewModel.navStoreCQVM.CurrentViewModel = new MenuViewModel(_createQuestionViewModel.navStoreCQVM);
+
 
                 }
                 else

@@ -26,6 +26,7 @@ namespace Quiz.ViewModel
         public bool goBack;
         private CreateNameViewModel _nameViewModel;
         public CreatingQuiz creatingQuiz;
+        public NavigationStore navStoreCQVM;
 
 
         public ICommand NavigateMenuCommand { get; }
@@ -35,6 +36,7 @@ namespace Quiz.ViewModel
 
         public CreateQuestionViewModel(NavigationStore navStore, CreateNameViewModel createNameViewModel)
         {
+            navStoreCQVM = navStore;
             isConfirmed = false;
             goBack = false;
             NavigateMenuCommand = new NavigateMenuCommand(navStore, this);
