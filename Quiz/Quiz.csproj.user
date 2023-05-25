@@ -28,6 +28,9 @@
     <Compile Update="View\QuizEditListQueView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\QuizView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\CreateNameView.xaml">
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\QuizEditListQueView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\QuizView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

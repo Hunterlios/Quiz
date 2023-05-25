@@ -19,6 +19,10 @@
                 <view:CreateNewGameView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewmodel:QuizViewModel}">
+                <view:QuizView/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewmodel:CreateViewModel}">
                 <view:CreateView/>
             </DataTemplate>

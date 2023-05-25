@@ -28,10 +28,9 @@
         </Grid.RowDefinitions>
 
         <Button FontSize="20" Margin="40px" Content="Wróć" Command="{Binding NavigateMenuCommand}"/>
-        <Button FontSize="20" Margin="186,80,186,0" Content="Graj" Background="White" Grid.Column="1" Grid.Row="3"/>
         <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Background="White" Foreground="Black" 
              FontSize="20" Content="Wybierz Quiz i rozpocznij grę:" Grid.Row="1" Height="62" Width="536"/>
-        <ListBox Margin="20,92,20,92" Grid.Column="1" Grid.RowSpan="3" x:Name="quizes" ItemsSource="{Binding FoundedQuizzes}" Grid.Row="1" HorizontalContentAlignment="Center">
+        <ListBox Margin="20,92,20,92" Grid.Column="1" Grid.RowSpan="3" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Grid.Row="1" HorizontalContentAlignment="Center">
         </ListBox>
 
 
