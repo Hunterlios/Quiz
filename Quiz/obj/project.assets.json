@@ -1162,11 +1162,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\48509\\Desktop\\FinalQuiz\\Quiz\\Quiz.csproj",
+      "projectUniqueName": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj",
       "projectName": "Quiz",
-      "projectPath": "C:\\Users\\48509\\Desktop\\FinalQuiz\\Quiz\\Quiz.csproj",
+      "projectPath": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj",
       "packagesPath": "C:\\Users\\48509\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\48509\\Desktop\\FinalQuiz\\Quiz\\obj\\",
+      "outputPath": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\48509\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -32,7 +32,7 @@
         <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" 
              FontSize="20" Content="lub wybierz Quiz do zedytowania z poniższej listy:" Margin="0,73,0,0"/>
         <ListBox FontSize="20" Margin="20" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" BorderThickness="3" BorderBrush="Black" Background="#F4EEE0"  HorizontalContentAlignment="Center" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}"/>
-        <Button FontSize="20" Margin="30px" Content="Przejdź do trybu usuwania pytań" Grid.Column="1" Grid.Row="5" BorderThickness="3" BorderBrush="Black" Background="#FF5959" Command="{Binding NavigateToCreateNameCommand}"/>
+        <Button FontSize="20" Margin="30px" Content="{Binding RemoveButtonContent}" Grid.Column="1" Grid.Row="5" BorderThickness="3" BorderBrush="Black" Background="#FF5959" Command="{Binding EreaseTheQuestions}"/>
 
     </Grid>
 </UserControl>
