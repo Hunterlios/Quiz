@@ -25,8 +25,7 @@ namespace Quiz.View
 
         public CreateNewGameView()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
     }
 }

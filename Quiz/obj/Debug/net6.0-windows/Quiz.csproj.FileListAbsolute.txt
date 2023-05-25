@@ -149,3 +149,6 @@ D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\Quiz.csproj.CopyComplete
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\Quiz.genruntimeconfig.cache
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\ref\Quiz.dll
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\bin\Debug\net6.0-windows\Quiz.dll.config
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\bin\Debug\net6.0-windows\Quizes.db
+D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\Quiz_Content.g.cs

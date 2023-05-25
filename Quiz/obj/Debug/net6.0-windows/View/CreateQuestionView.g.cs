@@ -9,7 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Quiz.View;
 using Quiz.ViewModel;
 using System;
 using System.Diagnostics;

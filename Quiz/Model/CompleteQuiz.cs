@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quiz.Model
 {
-    public class CompleteQuiz
+    public class CompletedQuiz
     {
         private string nameOfTheQuiz;
         private int _id;
@@ -22,7 +22,7 @@ namespace Quiz.Model
             set { _id = value; }
         }
 
-        public CompleteQuiz(int id, string nameOfTheQuiz)
+        public CompletedQuiz(int id, string nameOfTheQuiz)
         {
             Id = id;
             NameOfTheQuiz = nameOfTheQuiz;

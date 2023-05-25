@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace Quiz.ViewModel
 {
-    internal class CreateQuestionViewModel : BaseViewModel
+    public class CreateQuestionViewModel : BaseViewModel
     {
         
         private string _quizName;

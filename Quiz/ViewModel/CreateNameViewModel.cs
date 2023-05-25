@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace Quiz.ViewModel
 {
-    internal class CreateNameViewModel : BaseViewModel
+    public class CreateNameViewModel : BaseViewModel
     {
         private string _name;
         public event Action<string> NameUpdated;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Quiz.Model
 {
-    internal class NavigationStore
+    public class NavigationStore
     {
         public event Action CurrentViewModelChanged;
 

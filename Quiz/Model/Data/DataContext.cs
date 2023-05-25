@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Quiz.Model.Data
 {
-    internal class DataContext
+    public class DataContext
     {
         public static void CreateQuiz(CreateQuestionViewModel model)
         {
@@ -81,11 +81,11 @@ namespace Quiz.Model.Data
                 conn.Open();
 
                 //Removing Answers
-                using (var command = new SQLiteCommand("DELETE FROM Answers WHERE QuestionID IN (SELECT ID FROM Questions WHERE QuizID = @quizId)", conn))
-                {
-                    command.Parameters.AddWithValue("@quizId", quizId);
-                    command.ExecuteNonQuery();
-                }
+                //using (var command = new SQLiteCommand("DELETE FROM Answers WHERE QuestionID IN (SELECT ID FROM Questions WHERE QuizID = @quizId)", conn))
+                //{
+                //    command.Parameters.AddWithValue("@quizId", quizId);
+                //    command.ExecuteNonQuery();
+                //}
 
                 //Removing Questions
                 using (var command = new SQLiteCommand("DELETE FROM Questions WHERE QuizID = @quizId", conn))
@@ -134,31 +134,51 @@ namespace Quiz.Model.Data
         //    }
         //}
 
-        public static List<CompleteQuiz> GetQuizes()
+        //public static List<CompleteQuiz> GetQuizes()
+        //{
+        //    List<CompleteQuiz> quizesFound = new List<CompleteQuiz>();
+        //    var conn = new SQLiteConnection("Data Source=Quizes.db;Version=3;");
+        //    conn.Open();
+
+        //    string selectQuizesSql = "SELECT * FROM Quizes;";
+        //    var selectQuizesCommand = new SQLiteCommand(selectQuizesSql, conn);
+        //    SQLiteCommand command = new SQLiteCommand(selectQuizesSql, conn);
+        //    SQLiteDataReader reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        int quizId = reader.GetInt32(0);
+        //        string quizName = reader.GetString(1);
+        //        var quizInfo = new CompleteQuiz(reader.GetInt32(0), reader.GetString(1));
+        //        quizesFound.Add(quizInfo);
+        //    }
+        //    reader.Close();
+        //    conn.Close();
+
+        //    return quizesFound;
+        //}
+
+        public static List<CompletedQuiz> GetQuizzes()
         {
-            List<CompleteQuiz> quizesFound = new List<CompleteQuiz>();
-            using (var conn = new SQLiteConnection(LoadConnectionString()))
+            List<CompletedQuiz> quizzesFound = new List<CompletedQuiz>();
+            using (var connection = new SQLiteConnection(LoadConnectionString()))
             {
-                conn.Open();
+                connection.Open();
 
-                string selectQuizesSql = "SELECT * FROM Quizes;";
-                var selectQuizesCommand = new SQLiteCommand(selectQuizesSql, conn);
+                string selectQuizzesSql = "SELECT * FROM Quizes;";
+                var selectQuizzesCommand = new SQLiteCommand(selectQuizzesSql, connection);
 
-                using (var reader = selectQuizesCommand.ExecuteReader())
+                using (var reader = selectQuizzesCommand.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        int quizId = reader.GetInt32(0);
-                        string quizName = reader.GetString(1);
-                        var quizInfo = new CompleteQuiz(reader.GetInt32(0), reader.GetString(1));
-                        quizesFound.Add(quizInfo);
+                        var quizInfo = new CompletedQuiz(reader.GetInt32(0), reader.GetString(1));
+                        quizzesFound.Add(quizInfo);
                     }
                 }
-                conn.Close();
+                connection.Close();
             }
-            return quizesFound;
+            return quizzesFound;
         }
-
         public static List<Question> GetQuestions(int quizID)
         {
             List<Question> questions = new List<Question>();
@@ -182,16 +202,18 @@ namespace Quiz.Model.Data
                         reader.GetString(4),
                         reader.GetString(5),
                         reader.GetString(6)));
+                    questionNumber++;
                 }
+
                 reader.Close();
                 conn.Close();
             }
             return questions;
         }
 
-        private static string LoadConnectionString()
+        private static string LoadConnectionString(string id = "Default")
         {
-            return "Data Source=D:/Studia/Sem4/Programowanie objektowe i graficzne/Quizz/Quiz/Quiz/Quizes.db;Version=3;";
+            return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
     }
 
