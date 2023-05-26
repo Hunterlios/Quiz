@@ -86,14 +86,28 @@ namespace Quiz.ViewModel
 
         private void showMess(string select)
         {
-            foreach (var quiz in quizes)
+            if (!eraseMode)
             {
-                if (quiz.NameOfTheQuiz == select)
+                foreach (var quiz in quizes)
                 {
-                    navigationStore.CurrentViewModel = new CreateNameViewModel(navigationStore, select, quiz.Id);
+                    if (quiz.NameOfTheQuiz == select)
+                    {
+                        navigationStore.CurrentViewModel = new CreateNameViewModel(navigationStore, select, quiz.Id);
+                    }
                 }
-                
-            }         
+            }
+            else
+            {
+                foreach (var quiz in quizes)
+                {
+                    if (quiz.NameOfTheQuiz == select)
+                    {
+                        Items.Remove(quiz.NameOfTheQuiz);
+                        DataContext.RemoveQuiz(quiz.Id);
+                        break;
+                    }
+                }
+            }
         }
 
     }
