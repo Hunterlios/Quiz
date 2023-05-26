@@ -204,12 +204,10 @@ C:\Users\48509\Desktop\FinalQuiz\Quiz\obj\Debug\net6.0-windows\refint\Quiz.dll
 C:\Users\48509\Desktop\FinalQuiz\Quiz\obj\Debug\net6.0-windows\Quiz.pdb
 C:\Users\48509\Desktop\FinalQuiz\Quiz\obj\Debug\net6.0-windows\Quiz.genruntimeconfig.cache
 C:\Users\48509\Desktop\FinalQuiz\Quiz\obj\Debug\net6.0-windows\ref\Quiz.dll
-<<<<<<< HEAD
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizViewModel.g.cs
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizViewModel.baml
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizView.g.cs
 D:\Studia\Sem4\Programowanie objektowe i graficzne\Quizz\Quiz\Quiz\obj\Debug\net6.0-windows\View\QuizView.baml
-=======
 C:\Users\48509\Desktop\FinalQuiz2\Quiz\bin\Debug\net6.0-windows\Quizes.db
 C:\Users\48509\Desktop\FinalQuiz2\Quiz\bin\Debug\net6.0-windows\Quiz.exe
 C:\Users\48509\Desktop\FinalQuiz2\Quiz\bin\Debug\net6.0-windows\Quiz.dll.config

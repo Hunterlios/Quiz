@@ -7,7 +7,7 @@
              xmlns:viewmodel="clr-namespace:Quiz.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CreateNewGameViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="960">
-    <Grid Background="#252525">
+    <Grid Background="#393646">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -27,10 +27,10 @@
 
         </Grid.RowDefinitions>
 
-        <Button FontSize="20" Margin="40px" Content="Wróć" Command="{Binding NavigateMenuCommand}"/>
-        <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Background="White" Foreground="Black" 
+        <Button FontSize="20" Margin="31,40,31,40" Content="Wróć" BorderThickness="3" BorderBrush="Black" Background="#9D9788" Command="{Binding NavigateMenuCommand}"/>
+        <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" 
              FontSize="20" Content="Wybierz Quiz i rozpocznij grę:" Grid.Row="1" Height="62" Width="536"/>
-        <ListBox Margin="20,92,20,92" Grid.Column="1" Grid.RowSpan="3" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Grid.Row="1" HorizontalContentAlignment="Center">
+        <ListBox Margin="20,92,20,92" Background="#F4EEE0" Grid.Column="1" Grid.RowSpan="3" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Grid.Row="1" HorizontalContentAlignment="Center">
         </ListBox>
 
 
