@@ -1157,19 +1157,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48509\\.nuget\\packages\\": {}
+    "C:\\Users\\jakub\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj",
+      "projectUniqueName": "D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\Quiz.csproj",
       "projectName": "Quiz",
-      "projectPath": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\Quiz.csproj",
-      "packagesPath": "C:\\Users\\48509\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\48509\\Desktop\\FinalQuiz2\\Quiz\\obj\\",
+      "projectPath": "D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\Quiz.csproj",
+      "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
+      "outputPath": "D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\48509\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1218,8 +1223,16 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej D:\\Studia\\Sem4\\Programowanie objektowe i graficzne\\Quizz\\Quiz\\Quiz\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

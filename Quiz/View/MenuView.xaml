@@ -29,8 +29,8 @@
         </Grid.RowDefinitions>
 
         <Label Content="QUIZ" Foreground="#FFD659" Grid.Column="1" FontSize="92" Margin="168,0,176,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3" />
-        <Button Grid.Row="2" Grid.Column="2" Grid.RowSpan="1"  Content="NOWY QUIZ" BorderThickness="4" BorderBrush="Black" Background="White" FontSize="20" Margin="0,65,0,0" Command="{Binding NavigateToNewGameCommand}"/>
-        <Button Grid.Row="3" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="STWÓRZ QUIZ" BorderThickness="4" BorderBrush="Black" Background="White" FontSize="20" Margin="0,32,0,32" Command="{Binding NavigateToCreateCommand}"/>
-        <Button Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="WYJDŹ" BorderThickness="4" BorderBrush="Black" Background="White" FontSize="20" Margin="0,0,0,65" Command="{Binding ShutDownCommand}"/>
+        <Button Grid.Row="2" Grid.Column="2" Grid.RowSpan="1"  Content="NOWY QUIZ" Background="#FFD659" BorderThickness="3" BorderBrush="Black" FontSize="20" Margin="0,65,0,0" Command="{Binding NavigateToNewGameCommand}"/>
+        <Button Grid.Row="3" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="STWÓRZ QUIZ" Background="#F4EEE0" BorderThickness="3" BorderBrush="Black" FontSize="20" Margin="0,32,0,32" Command="{Binding NavigateToCreateCommand}"/>
+        <Button Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"  Content="WYJDŹ" Background="#F4EEE0" BorderThickness="3" BorderBrush="Black" FontSize="20" Margin="0,0,0,65" Command="{Binding ShutDownCommand}"/>
     </Grid>
 </UserControl>

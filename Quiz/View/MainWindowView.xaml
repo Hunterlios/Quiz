@@ -7,7 +7,8 @@
         xmlns:viewmodel="clr-namespace:Quiz.ViewModel"
         xmlns:view="clr-namespace:Quiz.View"
         mc:Ignorable="d"
-    Title="MainWindowView" Height="720" Width="960">
+        Title="Quiz" Height="720" Width="960"
+        WindowStartupLocation="CenterScreen">
 
     <ContentControl Content="{Binding CurrentViewModel}">
         <ContentControl.Resources>
@@ -17,6 +18,10 @@
 
             <DataTemplate DataType="{x:Type viewmodel:CreateNewGameViewModel}">
                 <view:CreateNewGameView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:QuizViewModel}">
+                <view:QuizView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewmodel:CreateViewModel}">
